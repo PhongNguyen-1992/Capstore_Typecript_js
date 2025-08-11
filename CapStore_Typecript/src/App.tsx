@@ -1,17 +1,13 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
-import { Button } from './components/ui/button'
+import { router } from './Router'
+import { useRoutes } from 'react-router-dom'
 
 function App() {
-  
+  const routerElement = useRoutes(router);
 
   return (
     <>
-    <div className="flex flex-wrap items-center gap-2 md:flex-row bg-black-500">
-     <Button>Defaut</Button>
-     </div>
+    {routerElement}
     </>
   )
 }
